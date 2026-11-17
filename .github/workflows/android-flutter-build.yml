@@ -97,6 +97,9 @@ jobs:
       - name: Install TypeScript for the Flutter build hook
         run: npm install --prefix .ci-tools/typescript --no-audit --no-fund typescript@5.9.3
 
+      - name: Enable pnpm via Corepack
+        run: corepack enable pnpm
+
       - name: Install Java
         uses: actions/setup-java@v4
         with:
